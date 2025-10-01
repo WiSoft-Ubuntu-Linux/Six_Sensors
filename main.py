@@ -20,7 +20,7 @@ def pm_init():
   except Exception as e:
       print(f"An unexpected error occurred: {e}")
 
-DB_URL = "postgresql://neondb_owner:npg_0dwXPaM5mELt@ep-crimson-pond-a1wep87d-pooler.ap-southeast-1.aws.neon.tech/classdata?sslmode=require&channel_binding=require"
+DB_URL = "neon url"
 conn = None
 def sql_init():
   global conn

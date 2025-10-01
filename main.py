@@ -66,7 +66,7 @@ def insert_to_db(temp, hum, pm2_5, pm10, conn):
     cur = conn.cursor()
     now = datetime.datetime.now()
     insert_query = sql.SQL("""
-      INSERT INTO classroom_information (room_id, room_number, temperature, humidity, pm2_5, pm10, timestamp)
+      INSERT INTO sensor_data (room_id, room_name, temperature, humidity, pm2_5, pm10, timestamp)
       VALUES (%s, %s, %s, %s, %s, %s, %s)
       """)
       

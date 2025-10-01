@@ -66,7 +66,7 @@ def insert_to_db(temp, hum, pm2_5, pm10, conn):
     cur = conn.cursor()
     now = datetime.datetime.now()
     insert_query = sql.SQL("""
-      INSERT INTO classroom_information (room_number_id,class_number, temperature, humidity, pm2_5, pm10, timestamp)
+      INSERT INTO classroom_information (room_id, room_number, temperature, humidity, pm2_5, pm10, timestamp)
       VALUES (%s, %s, %s, %s, %s, %s, %s)
       """)
       
@@ -120,7 +120,7 @@ finally:
     UART_BUS.close()
   if dht_device:
     dht_device.exit()
-    
+
 # try:
 #   while True:
 #     try:

@@ -120,3 +120,6 @@ finally:
     UART_BUS.close()
   if dht_device:
     dht_device.exit()
+  if conn and conn.closed == 0:
+     conn.close()
+     print("DB connection closed")

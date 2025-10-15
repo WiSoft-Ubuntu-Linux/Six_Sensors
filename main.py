@@ -20,7 +20,16 @@ def pm_init():
   except Exception as e:
       print(f"An unexpected error occurred: {e}")
 
-DB_URL = "neon url"
+DB_URL = 
+
+
+    'host="wisoft.io",
+    port="10012",
+    dbname="grafana",
+    user="grafana",
+    password="github update blank space"'  
+
+
 conn = None
 def sql_init():
   global conn

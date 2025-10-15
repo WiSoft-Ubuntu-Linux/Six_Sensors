@@ -20,14 +20,7 @@ def pm_init():
   except Exception as e:
       print(f"An unexpected error occurred: {e}")
 
-DB_URL = 
-
-
-    'host="wisoft.io",
-    port="10012",
-    dbname="grafana",
-    user="grafana",
-    password="github update blank space"'  
+DB_URL = 'host="wisoft.io", port="10012", dbname="grafana", user="grafana", password="github update blank space"'  
 
 
 conn = None
@@ -89,11 +82,6 @@ def insert_to_db(temp, hum, pm2_5, pm10, conn):
         
   except (Exception, psycopg2.Error) as error:
     print(f"PostgreSQL error: {error}")
-        
-  finally:
-    if conn:
-      cur.close()
-      conn.close()
 
 try:
   while True:

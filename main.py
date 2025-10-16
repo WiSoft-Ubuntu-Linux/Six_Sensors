@@ -20,14 +20,16 @@ def pm_init():
   except Exception as e:
       print(f"An unexpected error occurred: {e}")
 
-DB_URL = 'host="wisoft.io", port="10012", dbname="grafana", user="grafana", password="github update blank space"'  
-
-
 conn = None
 def sql_init():
   global conn
   try:
-    conn = psycopg2.connect(DB_URL)
+    conn = psycopg2.connect(
+      host="wisoft.io", 
+      port="10012", 
+      dbname="grafana", 
+      user="grafana", 
+      password="github update blank space")
     print("Database connection successful!")
   except psycopg2.OperationalError as e:
     print(f"Database connection failed: {e}")

@@ -6,7 +6,7 @@ from psycopg2 import sql
 import datetime
 import serial
 
-dht_device = adafruit_dht.DHT22(board.D4)
+dht_device = adafruit_dht.DHT22(board.D4, use_pulseio=False)
 
 UART_BUS = None  
 def pm_init():
